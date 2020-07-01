@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Stock Prices Lookup</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h2>Stock Price Lookup</h2>
+            <p>This app accepts a stock ticker input and plots stock price data.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3 well">
+                <form id='inputForm' method='post' action='graph' >
+                    <div class="form-group">
+                        <label for="stockName">Stock Ticker Symbol</label>
+                        <input type='text' id="stockName" class="form-control" name='ticker' value="NYT"/>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type='checkbox' name='priceType' value='close' />Closing price
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type='checkbox' name='priceType' value='adjClose' />Adjusted Closing price
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type='checkbox' name='priceType' value='open' />Opening price
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type='checkbox' name='priceType' value='adjOpen' />Adjusted Opening price
+                        </label>
+                    </div>
+                    <p><input class="btn btn-primary" type='submit' value='Submit'/></p>
+                </form>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
